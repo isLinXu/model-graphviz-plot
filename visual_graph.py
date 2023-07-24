@@ -3,7 +3,17 @@ import torchvision.models as models
 from torchviz import make_dot, make_dot_from_trace
 import torch
 
+import os
+os.environ["PATH"] += os.pathsep + '/opt/homebrew/bin/dot'
+
 def visualize_timm_model(model_name, input_size=(1, 3, 224, 224), visual_tag=False):
+    '''
+    visual timm model
+    :param model_name:
+    :param input_size:
+    :param visual_tag:
+    :return:
+    '''
     model = timm.create_model(model_name, pretrained=True)
     print(model)
     model.eval()
@@ -16,7 +26,13 @@ def visualize_timm_model(model_name, input_size=(1, 3, 224, 224), visual_tag=Fal
         vis_graph.view()
 
 def visual_torchvision_model(model_name, input_size=(1, 3, 224, 224), visual_tag=False):
-
+    '''
+    visual torchvision model
+    :param model_name:
+    :param input_size:
+    :param visual_tag:
+    :return:
+    '''
     global model
     if model_name == 'alexnet':
         model = models.alexnet(pretrained=True)
@@ -44,7 +60,7 @@ def visual_torchvision_model(model_name, input_size=(1, 3, 224, 224), visual_tag
         model = models.squeezenet.squeezenet1_0(pretrained=True)
     elif model_name == 'vgg16':
         model = models.vgg.vgg16(pretrained=True)
-    elif model_name == 'vit_base_patch16_224':
+    elif model_name == 'vit_b_16':
         model = models.vision_transformer.vit_b_16(pretrained=True)
     elif model_name == 'swin_t':
         model = models.swin_transformer.swin_t(pretrained=True)
@@ -55,15 +71,17 @@ def visual_torchvision_model(model_name, input_size=(1, 3, 224, 224), visual_tag
     print(model)
     model.eval()
     x = torch.randn(input_size)
-    with torch.no_grad():
-        y = model(x)
-    vis_graph = make_dot(y.mean(), params=dict(model.named_parameters()))
+
+    y = model(x)
+    vis_graph = make_dot(y, params=dict(model.named_parameters()))
+    # vis_graph = make_dot(y.mean(), params=dict(model.named_parameters()))
     vis_graph.render(model_name, format='png')
     if visual_tag:
         vis_graph.view()
 
 
 if __name__ == '__main__':
-    model_name = 'convnext_tiny'
+    model_name = 'mobilenet_v2'
+    # input_size = (4, 3, 32, 32)
     input_size = (1, 3, 224, 224)
-    visual_torchvision_model(model_name, input_size)
+    visual_torchvision_model(model_name, input_size, visual_tag=False)

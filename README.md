@@ -2,8 +2,13 @@
 
 
 ## Install 
+### linux
 ```shell
 sudo apt install graphviz
+```
+### mac
+```shell
+sudo brew install graphviz
 ```
 
 ```shell
