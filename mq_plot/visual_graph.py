@@ -18,12 +18,18 @@ def visualize_timm_model(model_name, input_size=(1, 3, 224, 224), visual_tag=Fal
     print(model)
     model.eval()
     x = torch.randn(input_size)
-    with torch.no_grad():
-        y = model(x)
-    vis_graph = make_dot(y.mean(), params=dict(model.named_parameters()))
-    vis_graph.render(model_name, format='png')
-    if visual_tag:
-        vis_graph.view()
+    y = model(x)
+    dot = make_dot(y, params=dict(model.named_parameters()))
+    dot.format = 'png'
+    dot.render(model_name)
+
+    # with torch.no_grad():
+    #     y = model(x)
+    # vis_graph = make_dot(y.mean(), params=dict(model.named_parameters()))
+    # vis_graph = make_dot(y, params=dict(model.named_parameters()))
+    # vis_graph.render(model_name, format='png')
+    # if visual_tag:
+    #     vis_graph.view()
 
 def visual_torchvision_model(model_name, input_size=(1, 3, 224, 224), visual_tag=False):
     '''
@@ -66,6 +72,9 @@ def visual_torchvision_model(model_name, input_size=(1, 3, 224, 224), visual_tag
         model = models.swin_transformer.swin_t(pretrained=True)
     elif model_name == 'maxvit':
         model = models.maxvit.maxvit_t(pretrained=True)
+    elif model_name == 'RetinaNet':
+        # model = models.detection.RetinaNet(pretrained=True, backbone='resnet50_fpn', num_classes=91)
+        model = models.detection.retinanet_resnet50_fpn(pretrained=True)
     else:
         raise NotImplementedError
     print(model)
@@ -73,6 +82,7 @@ def visual_torchvision_model(model_name, input_size=(1, 3, 224, 224), visual_tag
     x = torch.randn(input_size)
 
     y = model(x)
+    # vis_graph = make_dot(model, params=dict(model.named_parameters()))
     vis_graph = make_dot(y, params=dict(model.named_parameters()))
     # vis_graph = make_dot(y.mean(), params=dict(model.named_parameters()))
     vis_graph.render(model_name, format='png')
@@ -81,7 +91,11 @@ def visual_torchvision_model(model_name, input_size=(1, 3, 224, 224), visual_tag
 
 
 if __name__ == '__main__':
-    model_name = 'mobilenet_v2'
+    # model_name = 'RetinaNet'
     # input_size = (4, 3, 32, 32)
     input_size = (1, 3, 224, 224)
-    visual_torchvision_model(model_name, input_size, visual_tag=False)
+    # input_size = (1, 3, 240, 240)
+    # visual_torchvision_model(model_name, input_size, visual_tag=False)
+    model_name = 'maxvit_base_tf_224'
+    # input_size = (1, 3, 224, 224)
+    visualize_timm_model(model_name, input_size=input_size,visual_tag=False)
