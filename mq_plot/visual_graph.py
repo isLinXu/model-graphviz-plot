@@ -3,9 +3,6 @@ import torchvision.models as models
 from torchviz import make_dot, make_dot_from_trace
 import torch
 
-import os
-os.environ["PATH"] += os.pathsep + '/opt/homebrew/bin/dot'
-
 def visualize_timm_model(model_name, input_size=(1, 3, 224, 224), visual_tag=False):
     '''
     visual timm model
@@ -96,6 +93,6 @@ if __name__ == '__main__':
     input_size = (1, 3, 224, 224)
     # input_size = (1, 3, 240, 240)
     # visual_torchvision_model(model_name, input_size, visual_tag=False)
-    model_name = 'maxvit_base_tf_224'
+    model_name = 'mobilevit_s'
     # input_size = (1, 3, 224, 224)
     visualize_timm_model(model_name, input_size=input_size,visual_tag=False)
