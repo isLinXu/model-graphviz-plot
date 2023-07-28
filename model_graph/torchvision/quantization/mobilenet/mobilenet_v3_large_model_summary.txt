@@ -1,0 +1,72 @@
+=========================================================================================================
+Layer (type:depth-idx)                                  Output Shape              Param #
+=========================================================================================================
+QuantizableMobileNetV3                                  [1, 1000]                 --
+├─QuantStub: 1-1                                        [1, 3, 224, 224]          --
+├─Sequential: 1-2                                       [1, 960, 7, 7]            --
+│    └─Conv2dNormActivation: 2-1                        [1, 16, 112, 112]         --
+│    │    └─Conv2d: 3-1                                 [1, 16, 112, 112]         432
+│    │    └─BatchNorm2d: 3-2                            [1, 16, 112, 112]         32
+│    │    └─Hardswish: 3-3                              [1, 16, 112, 112]         --
+│    └─QuantizableInvertedResidual: 2-2                 [1, 16, 112, 112]         --
+│    │    └─Sequential: 3-4                             [1, 16, 112, 112]         464
+│    │    └─FloatFunctional: 3-5                        --                        --
+│    └─QuantizableInvertedResidual: 2-3                 [1, 24, 56, 56]           --
+│    │    └─Sequential: 3-6                             [1, 24, 56, 56]           3,440
+│    └─QuantizableInvertedResidual: 2-4                 [1, 24, 56, 56]           --
+│    │    └─Sequential: 3-7                             [1, 24, 56, 56]           4,440
+│    │    └─FloatFunctional: 3-8                        --                        --
+│    └─QuantizableInvertedResidual: 2-5                 [1, 40, 28, 28]           --
+│    │    └─Sequential: 3-9                             [1, 40, 28, 28]           10,328
+│    └─QuantizableInvertedResidual: 2-6                 [1, 40, 28, 28]           --
+│    │    └─Sequential: 3-10                            [1, 40, 28, 28]           20,992
+│    │    └─FloatFunctional: 3-11                       --                        --
+│    └─QuantizableInvertedResidual: 2-7                 [1, 40, 28, 28]           --
+│    │    └─Sequential: 3-12                            [1, 40, 28, 28]           20,992
+│    │    └─FloatFunctional: 3-13                       --                        --
+│    └─QuantizableInvertedResidual: 2-8                 [1, 80, 14, 14]           --
+│    │    └─Sequential: 3-14                            [1, 80, 14, 14]           32,080
+│    └─QuantizableInvertedResidual: 2-9                 [1, 80, 14, 14]           --
+│    │    └─Sequential: 3-15                            [1, 80, 14, 14]           34,760
+│    │    └─FloatFunctional: 3-16                       --                        --
+│    └─QuantizableInvertedResidual: 2-10                [1, 80, 14, 14]           --
+│    │    └─Sequential: 3-17                            [1, 80, 14, 14]           31,992
+│    │    └─FloatFunctional: 3-18                       --                        --
+│    └─QuantizableInvertedResidual: 2-11                [1, 80, 14, 14]           --
+│    │    └─Sequential: 3-19                            [1, 80, 14, 14]           31,992
+│    │    └─FloatFunctional: 3-20                       --                        --
+│    └─QuantizableInvertedResidual: 2-12                [1, 112, 14, 14]          --
+│    │    └─Sequential: 3-21                            [1, 112, 14, 14]          214,424
+│    └─QuantizableInvertedResidual: 2-13                [1, 112, 14, 14]          --
+│    │    └─Sequential: 3-22                            [1, 112, 14, 14]          386,120
+│    │    └─FloatFunctional: 3-23                       --                        --
+│    └─QuantizableInvertedResidual: 2-14                [1, 160, 7, 7]            --
+│    │    └─Sequential: 3-24                            [1, 160, 7, 7]            429,224
+│    └─QuantizableInvertedResidual: 2-15                [1, 160, 7, 7]            --
+│    │    └─Sequential: 3-25                            [1, 160, 7, 7]            797,360
+│    │    └─FloatFunctional: 3-26                       --                        --
+│    └─QuantizableInvertedResidual: 2-16                [1, 160, 7, 7]            --
+│    │    └─Sequential: 3-27                            [1, 160, 7, 7]            797,360
+│    │    └─FloatFunctional: 3-28                       --                        --
+│    └─Conv2dNormActivation: 2-17                       [1, 960, 7, 7]            --
+│    │    └─Conv2d: 3-29                                [1, 960, 7, 7]            153,600
+│    │    └─BatchNorm2d: 3-30                           [1, 960, 7, 7]            1,920
+│    │    └─Hardswish: 3-31                             [1, 960, 7, 7]            --
+├─AdaptiveAvgPool2d: 1-3                                [1, 960, 1, 1]            --
+├─Sequential: 1-4                                       [1, 1000]                 --
+│    └─Linear: 2-18                                     [1, 1280]                 1,230,080
+│    └─Hardswish: 2-19                                  [1, 1280]                 --
+│    └─Dropout: 2-20                                    [1, 1280]                 --
+│    └─Linear: 2-21                                     [1, 1000]                 1,281,000
+├─DeQuantStub: 1-5                                      [1, 1000]                 --
+=========================================================================================================
+Total params: 5,483,032
+Trainable params: 5,483,032
+Non-trainable params: 0
+Total mult-adds (M): 216.62
+=========================================================================================================
+Input size (MB): 0.60
+Forward/backward pass size (MB): 70.46
+Params size (MB): 21.93
+Estimated Total Size (MB): 92.99
+=========================================================================================================
