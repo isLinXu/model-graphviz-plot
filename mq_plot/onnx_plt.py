@@ -2,6 +2,7 @@ import timm
 import torch
 import netron
 
+
 class Net(torch.nn.Module):
     def __init__(self):
         super(Net, self).__init__()
@@ -16,15 +17,22 @@ class Net(torch.nn.Module):
 
 # model = Net()
 
-model_name = 'crossvit_9_240'
-model = timm.create_model(model_name, pretrained=True)
-model.eval()
-# 保存模型为 ONNX 格式
-dummy_input = torch.randn(1, 3, 224, 224)
-# dummy_input = torch.randn(1, 10)
-onnx_name = model_name + ".onnx"
-torch.onnx.export(model, dummy_input, onnx_name, verbose=True, input_names=['input'], output_names=['output'])
+def onnx_vis_plot(model_name, model, dummy_input):
+    model.eval()
+    # 保存模型为 ONNX 格式
 
-# 在浏览器中打开 Netron
-netron.start(onnx_name)
+    onnx_name = model_name + ".onnx"
 
+    torch.onnx.export(model, dummy_input, onnx_name, verbose=True, input_names=['input'], output_names=['output'])
+
+    # 在浏览器中打开 Netron
+    netron.start(onnx_name)
+
+
+if __name__ == '__main__':
+
+    model_name = 'dm_nfnet_f0'
+    model = timm.create_model(model_name, pretrained=True)
+    dummy_input = torch.randn(1, 3, 224, 224)
+    # dummy_input = torch.randn(1, 10)
+    onnx_vis_plot(model_name, model,dummy_input)
