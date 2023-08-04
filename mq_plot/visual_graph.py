@@ -93,6 +93,22 @@ if __name__ == '__main__':
     input_size = (1, 3, 224, 224)
     # input_size = (1, 3, 240, 240)
     # visual_torchvision_model(model_name, input_size, visual_tag=False)
-    model_name = 'mobilevit_s'
-    # input_size = (1, 3, 224, 224)
-    visualize_timm_model(model_name, input_size=input_size,visual_tag=False)
+    # model_name = 'mixnet_s'
+    # # input_size = (1, 3, 224, 224)
+    # visualize_timm_model(model_name, input_size=input_size,visual_tag=False)
+
+    model_name = 'FasterRCNN'
+    model = models.detection.fasterrcnn_resnet50_fpn(pretrained=True)
+
+    model.eval()
+    x = torch.randn(input_size)
+
+    y = model(x)
+    # vis_graph = make_dot(model, params=dict(model.named_parameters()))
+    vis_graph = make_dot(y, params=dict(model.named_parameters()))
+    # vis_graph = make_dot(y.mean(), params=dict(model.named_parameters()))
+    vis_graph.render(model_name, format='png')
+    # summary(model, input_size=(1, 3, 224, 224))
+
+    # summary(model, input_size=(batch_size, 3, 224, 224))
+    # model_info_print(model, input_size, model_name=model_name)
