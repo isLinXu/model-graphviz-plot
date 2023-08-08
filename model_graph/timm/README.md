@@ -1,0 +1,42 @@
+# timm
+
+| Num. |                Model                 |                            Branch                            |                             Info                             |
+| :--: | :----------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
+|  1   |          [convit](./convit)          |             [convit_base](./convit/convit_base)              | [convit_base_model_summary.txt](./convit/convit_base_model_summary.txt) |
+|  2   |        [convnext](./convnext)        |          [convnext_tiny](./convnext/convnext_tiny)           | [convnext_tiny_model_summary.txt](./convnext/convnext_tiny_model_summary.txt) |
+|  3   |        [crossvit](./crossvit)        |         [crossvit_9_240](./crossvit/crossvit_9_240)          | [crossvit_9_240_model_summary.txt](./crossvit/crossvit_9_240_model_summary.txt) |
+|  4   |      [cs3darknet](./cs3darknet)      |          [cs3darknet_m](./cs3darknet/cs3darknet_m)           | [cs3darknet_m_model_summary.txt](./cs3darknet/cs3darknet_m_model_summary.txt) |
+|  5   |       [darknet53](./darknet53)       |              [darknet53](./darknet53/darknet53)              | [darknet53_model_summary.txt](./darknet53/darknet53_model_summary.txt) |
+|  6   |           [davit](./davit)           |               [davit_base](./davit/davit_base)               | [davit_base_model_summary.txt](./davit/davit_base_model_summary.txt) |
+|  7   |        [densenet](./densenet)        |            [densenet121](./densenet/densenet121)             | [densenet121_model_summary.txt](./densenet/densenet121_model_summary.txt) |
+|  8   |             [dla](./dla)             |                     [dla34](./dla/dla34)                     |   [dla34_model_summary.txt](./dla/dla34_model_summary.txt)   |
+|  9   |              [dm](./dm)              |               [dm_nfnet_f0](./dm/dm_nfnet_f0)                | [dm_nfnet_f0_model_summary.txt](./dm/dm_nfnet_f0_model_summary.txt) |
+|  10  |             [dpn](./dpn)             |                     [dpn68](./dpn/dpn68)                     |   [dpn68_model_summary.txt](./dpn/dpn68_model_summary.txt)   |
+|  11  |        [edgenext](./edgenext)        |         [edgenext_small](./edgenext/edgenext_small)          | [edgenext_small_model_summary.txt](./edgenext/edgenext_small_model_summary.txt) |
+|  12  | [efficientformer](./efficientformer) |  [efficientformer_l1](./efficientformer/efficientformer_l1)  | [efficientformer_l1_model_summary.txt](./efficientformer/efficientformer_l1_model_summary.txt) |
+|  13  |    [efficientnet](./efficientnet)    |      [efficientnet_b0](./efficientnet/efficientnet_b0)       | [efficientnet_b0_model_summary.txt](./efficientnet/efficientnet_b0_model_summary.txt) |
+|  14  |             [eva](./eva)             |    [eva02_base_patch14_224](./eva/eva02_base_patch14_224)    | [eva02_base_patch14_224_model_summary.txt](./eva/eva02_base_patch14_224_model_summary.txt) |
+|  15  |           [fbnet](./fbnet)           |                [fbnetv3_b](./fbnet/fbnetv3_b)                | [fbnetv3_b_model_summary.txt](./fbnet/fbnetv3_b_model_summary.txt) |
+|  16  |        [flexivit](./flexivit)        |          [flexivit_base](./flexivit/flexivit_base)           | [flexivit_base_model_summary.txt](./flexivit/flexivit_base_model_summary.txt) |
+|  17  |        [focalnet](./focalnet)        |      [focalnet_base_lrf](./focalnet/focalnet_base_lrf)       | [focalnet_base_lrf_model_summary.txt](./focalnet/focalnet_base_lrf_model_summary.txt) |
+|  18  |           [gcvit](./gcvit)           |              [gcvit_small](./gcvit/gcvit_small)              | [gcvit_small_model_summary.txt](./gcvit/gcvit_small_model_summary.txt) |
+|  19  |          [gernet](./gernet)          |                [gernet_s](./gernet/gernet_s)                 | [gernet_s_model_summary.txt](./gernet/gernet_s_model_summary.txt) |
+|  20  |        [ghostnet](./ghostnet)        |           [ghostnet_100](./ghostnet/ghostnet_100)            | [ghostnet_100_model_summary.txt](./ghostnet/ghostnet_100_model_summary.txt) |
+|  21  |          [gmixer](./gmixer)          |                        gmixer_24_224                         | [gmixer_24_224_model_summary.txt](./gmixer/gmixer_24_224_model_summary.txt) |
+|  22  |            [gmlp](./gmlp)            |             [gmlp_s16_224](./gmlp/gmlp_s16_224)              | [gmlp_s16_224_model_summary.txt](./gmlp/gmlp_s16_224_model_summary.txt) |
+|  23  |           [hrnet](./hrnet)           |                [hrnet_w18](./hrnet/hrnet_w18)                | [hrnet_w18_model_summary.txt](./hrnet/hrnet_w18_model_summary.txt) |
+|  24  |       [inception](./inception)       |           [inception_v3](./inception/inception_v3)           | [inception_v3_model_summary.txt](./inception/inception_v3_model_summary.txt) |
+|  25  |           [lcnet](./lcnet)           |                [lcnet_050](./lcnet/lcnet_050)                | [lcnet_050_model_summary.txt](./lcnet/lcnet_050_model_summary.txt) |
+|  26  |           [levit](./levit)           |                [levit_128](./levit/levit_128)                | [levit_128_model_summary.txt](./levit/levit_128_model_summary.txt) |
+|  27  |          [maxvit](./maxvit)          |      [maxvit_base_tf_224](./maxvit/maxvit_base_tf_224)       | [maxvit_base_tf_224_model_summary.txt](./maxvit/maxvit_base_tf_224_model_summary.txt) |
+|  28  |           [mixer](./mixer)           |            [mixer_b16_224](./mixer/mixer_b16_224)            | [mixer_b16_224_model_summary.txt](./mixer/mixer_b16_224_model_summary.txt) |
+|  29  |          [mixnet](./mixnet)          |                [mixnet_s](./mixnet/mixnet_s)                 | [mixnet_s_model_summary.txt](./mixnet/mixnet_s_model_summary.txt) |
+|  30  |         [mnasnet](./mnasnet)         |              [mnasnet_a1](./mnasnet/mnasnet_a1)              | [mnasnet_a1_model_summary.txt](./mnasnet/mnasnet_a1_model_summary.txt) |
+|  31  |        [mobelnet](./mobelnet)        |        [mobilenetv2_050](./mobelnet/mobilenetv2_050)         | [mobilenetv2_050_model_summary.txt](./mobelnet/mobilenetv2_050_model_summary.txt) |
+|  32  |       [mobilevit](./mobilevit)       |            [mobilevit_s](./mobilevit/mobilevit_s)            | [mobilevit_s_model_summary.txt](./mobilevit/mobilevit_s_model_summary.txt) |
+|  33  |          [mvitv2](./mvitv2)          |             [mvitv2_base](./mvitv2/mvitv2_base)              | [mvitv2_base_model_summary.txt](./mvitv2/mvitv2_base_model_summary.txt) |
+|  34  |          [resnet](./resnet)          |                [resnet18](./resnet/resnet18)                 | [resnet18_model_summary.txt](./resnet/resnet18_model_summary.txt) |
+|  35  |         [resnext](./resnext)         |         [resnext50_32x4d](./resnext/resnext50_32x4d)         | [resnext50_32x4d_model_summary.txt](./resnext/resnext50_32x4d_model_summary.txt) |
+|  36  |            [swin](./swin)            | [swin_base_patch4_window7_224](./swin/swin_base_patch4_window7_224) | [swin_base_patch4_window7_224_model_summary.txt](./swin/swin_base_patch4_window7_224_model_summary.txt) |
+|  37  |             [vit](./vit)             |      [vit_base_patch16_224](./vit/vit_base_patch16_224)      | [vit_base_patch16_224_model_summary.txt](./vit/vit_base_patch16_224_model_summary.txt) |
+
