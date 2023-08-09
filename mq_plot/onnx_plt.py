@@ -1,7 +1,9 @@
 import timm
 import torch
 import netron
-
+import torchvision.models as models
+import warnings
+warnings.filterwarnings("ignore")
 
 class Net(torch.nn.Module):
     def __init__(self):
@@ -31,8 +33,13 @@ def onnx_vis_plot(model_name, model, dummy_input):
 
 if __name__ == '__main__':
 
-    model_name = 'dm_nfnet_f0'
-    model = timm.create_model(model_name, pretrained=True)
+    # model_name = 'dm_nfnet_f0'
+    # model = timm.create_model(model_name, pretrained=True)
+    model_name = 'vit_b_16'
+    # model = models.keypointrcnn_resnet50_fpn(pretrained=True)
+    # model = models.quantization.shufflenet_v2_x0_5(pretrained=True)
+    model = models.vit_b_16(pretrained=True)
+    # model = models.segmentation.squeezenet1_0(pretrained=True)
     dummy_input = torch.randn(1, 3, 224, 224)
     # dummy_input = torch.randn(1, 10)
     onnx_vis_plot(model_name, model,dummy_input)

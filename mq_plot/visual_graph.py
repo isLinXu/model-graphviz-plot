@@ -70,8 +70,9 @@ def visual_torchvision_model(model_name, input_size=(1, 3, 224, 224), visual_tag
     elif model_name == 'maxvit':
         model = models.maxvit.maxvit_t(pretrained=True)
     elif model_name == 'RetinaNet':
-        # model = models.detection.RetinaNet(pretrained=True, backbone='resnet50_fpn', num_classes=91)
         model = models.detection.retinanet_resnet50_fpn(pretrained=True)
+    elif model_name == 'FasterRCNN':
+        model = models.detection.fasterrcnn_resnet50_fpn(pretrained=True)
     else:
         raise NotImplementedError
     print(model)
@@ -88,26 +89,26 @@ def visual_torchvision_model(model_name, input_size=(1, 3, 224, 224), visual_tag
 
 
 if __name__ == '__main__':
-    # model_name = 'RetinaNet'
+    model_name = 'FasterRCNN'
     # input_size = (4, 3, 32, 32)
     input_size = (1, 3, 224, 224)
     # input_size = (1, 3, 240, 240)
-    # visual_torchvision_model(model_name, input_size, visual_tag=False)
+    visual_torchvision_model(model_name, input_size, visual_tag=False)
     # model_name = 'mixnet_s'
     # # input_size = (1, 3, 224, 224)
     # visualize_timm_model(model_name, input_size=input_size,visual_tag=False)
 
-    model_name = 'FasterRCNN'
-    model = models.detection.fasterrcnn_resnet50_fpn(pretrained=True)
+    # model_name = 'FasterRCNN'
+    # model = models.detection.fasterrcnn_resnet50_fpn(pretrained=True)
 
-    model.eval()
-    x = torch.randn(input_size)
+    # model.eval()
+    # x = torch.randn(input_size)
 
-    y = model(x)
+    # y = model(x)
     # vis_graph = make_dot(model, params=dict(model.named_parameters()))
-    vis_graph = make_dot(y, params=dict(model.named_parameters()))
+    # vis_graph = make_dot(y, params=dict(model.named_parameters()))
     # vis_graph = make_dot(y.mean(), params=dict(model.named_parameters()))
-    vis_graph.render(model_name, format='png')
+    # vis_graph.render(model_name, format='png')
     # summary(model, input_size=(1, 3, 224, 224))
 
     # summary(model, input_size=(batch_size, 3, 224, 224))
