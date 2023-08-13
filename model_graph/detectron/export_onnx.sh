@@ -1,7 +1,7 @@
 
-SAMPLE_IMAGE=/Users/gatilin/PycharmProjects/model-graphviz-plot/model_graph/detectron/000000439715.jpg
-CONFIG_FILE=configs/COCO-Detection/faster_rcnn_R_50_C4_3x.yaml
-MODEL_WEIGHTS=/Users/gatilin/PycharmProjects/model-graphviz-plot/model_graph/detectron/weights/COCO-Detection/faster_rcnn_R_50_C4_3x/model_final_f97cb7.pkl
+SAMPLE_IMAGE=000000439715.jpg
+CONFIG_FILE=configs/COCO-Detection/faster_rcnn_R_101_C4_3x.yaml
+MODEL_WEIGHTS=weights/COCO-Detection/faster_rcnn_R_101_C4_3x/model_final_298dad.pkl
 EXPORT_METHOD=tracing
 FORMAT=onnx
 OUTPUT_DIR=./
