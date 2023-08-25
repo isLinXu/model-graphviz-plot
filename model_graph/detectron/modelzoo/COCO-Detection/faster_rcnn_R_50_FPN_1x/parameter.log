@@ -1,0 +1,131 @@
+[08/25 12:01:07 detectron2]: Parameter Count:
+| name                                                     | #elements or shape   |
+|:---------------------------------------------------------|:---------------------|
+| model                                                    | 41.7M                |
+|  backbone                                                |  26.8M               |
+|   backbone.fpn_lateral2                                  |   65.8K              |
+|    backbone.fpn_lateral2.weight                          |    (256, 256, 1, 1)  |
+|    backbone.fpn_lateral2.bias                            |    (256,)            |
+|   backbone.fpn_output2                                   |   0.6M               |
+|    backbone.fpn_output2.weight                           |    (256, 256, 3, 3)  |
+|    backbone.fpn_output2.bias                             |    (256,)            |
+|   backbone.fpn_lateral3                                  |   0.1M               |
+|    backbone.fpn_lateral3.weight                          |    (256, 512, 1, 1)  |
+|    backbone.fpn_lateral3.bias                            |    (256,)            |
+|   backbone.fpn_output3                                   |   0.6M               |
+|    backbone.fpn_output3.weight                           |    (256, 256, 3, 3)  |
+|    backbone.fpn_output3.bias                             |    (256,)            |
+|   backbone.fpn_lateral4                                  |   0.3M               |
+|    backbone.fpn_lateral4.weight                          |    (256, 1024, 1, 1) |
+|    backbone.fpn_lateral4.bias                            |    (256,)            |
+|   backbone.fpn_output4                                   |   0.6M               |
+|    backbone.fpn_output4.weight                           |    (256, 256, 3, 3)  |
+|    backbone.fpn_output4.bias                             |    (256,)            |
+|   backbone.fpn_lateral5                                  |   0.5M               |
+|    backbone.fpn_lateral5.weight                          |    (256, 2048, 1, 1) |
+|    backbone.fpn_lateral5.bias                            |    (256,)            |
+|   backbone.fpn_output5                                   |   0.6M               |
+|    backbone.fpn_output5.weight                           |    (256, 256, 3, 3)  |
+|    backbone.fpn_output5.bias                             |    (256,)            |
+|   backbone.bottom_up                                     |   23.5M              |
+|    backbone.bottom_up.stem                               |    9.4K              |
+|     backbone.bottom_up.stem.conv1                        |     9.4K             |
+|      backbone.bottom_up.stem.conv1.weight                |      (64, 3, 7, 7)   |
+|    backbone.bottom_up.res2                               |    0.2M              |
+|     backbone.bottom_up.res2.0                            |     73.7K            |
+|      backbone.bottom_up.res2.0.shortcut                  |      16.4K           |
+|      backbone.bottom_up.res2.0.conv1                     |      4.1K            |
+|      backbone.bottom_up.res2.0.conv2                     |      36.9K           |
+|      backbone.bottom_up.res2.0.conv3                     |      16.4K           |
+|     backbone.bottom_up.res2.1                            |     69.6K            |
+|      backbone.bottom_up.res2.1.conv1                     |      16.4K           |
+|      backbone.bottom_up.res2.1.conv2                     |      36.9K           |
+|      backbone.bottom_up.res2.1.conv3                     |      16.4K           |
+|     backbone.bottom_up.res2.2                            |     69.6K            |
+|      backbone.bottom_up.res2.2.conv1                     |      16.4K           |
+|      backbone.bottom_up.res2.2.conv2                     |      36.9K           |
+|      backbone.bottom_up.res2.2.conv3                     |      16.4K           |
+|    backbone.bottom_up.res3                               |    1.2M              |
+|     backbone.bottom_up.res3.0                            |     0.4M             |
+|      backbone.bottom_up.res3.0.shortcut                  |      0.1M            |
+|      backbone.bottom_up.res3.0.conv1                     |      32.8K           |
+|      backbone.bottom_up.res3.0.conv2                     |      0.1M            |
+|      backbone.bottom_up.res3.0.conv3                     |      65.5K           |
+|     backbone.bottom_up.res3.1                            |     0.3M             |
+|      backbone.bottom_up.res3.1.conv1                     |      65.5K           |
+|      backbone.bottom_up.res3.1.conv2                     |      0.1M            |
+|      backbone.bottom_up.res3.1.conv3                     |      65.5K           |
+|     backbone.bottom_up.res3.2                            |     0.3M             |
+|      backbone.bottom_up.res3.2.conv1                     |      65.5K           |
+|      backbone.bottom_up.res3.2.conv2                     |      0.1M            |
+|      backbone.bottom_up.res3.2.conv3                     |      65.5K           |
+|     backbone.bottom_up.res3.3                            |     0.3M             |
+|      backbone.bottom_up.res3.3.conv1                     |      65.5K           |
+|      backbone.bottom_up.res3.3.conv2                     |      0.1M            |
+|      backbone.bottom_up.res3.3.conv3                     |      65.5K           |
+|    backbone.bottom_up.res4                               |    7.1M              |
+|     backbone.bottom_up.res4.0                            |     1.5M             |
+|      backbone.bottom_up.res4.0.shortcut                  |      0.5M            |
+|      backbone.bottom_up.res4.0.conv1                     |      0.1M            |
+|      backbone.bottom_up.res4.0.conv2                     |      0.6M            |
+|      backbone.bottom_up.res4.0.conv3                     |      0.3M            |
+|     backbone.bottom_up.res4.1                            |     1.1M             |
+|      backbone.bottom_up.res4.1.conv1                     |      0.3M            |
+|      backbone.bottom_up.res4.1.conv2                     |      0.6M            |
+|      backbone.bottom_up.res4.1.conv3                     |      0.3M            |
+|     backbone.bottom_up.res4.2                            |     1.1M             |
+|      backbone.bottom_up.res4.2.conv1                     |      0.3M            |
+|      backbone.bottom_up.res4.2.conv2                     |      0.6M            |
+|      backbone.bottom_up.res4.2.conv3                     |      0.3M            |
+|     backbone.bottom_up.res4.3                            |     1.1M             |
+|      backbone.bottom_up.res4.3.conv1                     |      0.3M            |
+|      backbone.bottom_up.res4.3.conv2                     |      0.6M            |
+|      backbone.bottom_up.res4.3.conv3                     |      0.3M            |
+|     backbone.bottom_up.res4.4                            |     1.1M             |
+|      backbone.bottom_up.res4.4.conv1                     |      0.3M            |
+|      backbone.bottom_up.res4.4.conv2                     |      0.6M            |
+|      backbone.bottom_up.res4.4.conv3                     |      0.3M            |
+|     backbone.bottom_up.res4.5                            |     1.1M             |
+|      backbone.bottom_up.res4.5.conv1                     |      0.3M            |
+|      backbone.bottom_up.res4.5.conv2                     |      0.6M            |
+|      backbone.bottom_up.res4.5.conv3                     |      0.3M            |
+|    backbone.bottom_up.res5                               |    14.9M             |
+|     backbone.bottom_up.res5.0                            |     6.0M             |
+|      backbone.bottom_up.res5.0.shortcut                  |      2.1M            |
+|      backbone.bottom_up.res5.0.conv1                     |      0.5M            |
+|      backbone.bottom_up.res5.0.conv2                     |      2.4M            |
+|      backbone.bottom_up.res5.0.conv3                     |      1.0M            |
+|     backbone.bottom_up.res5.1                            |     4.5M             |
+|      backbone.bottom_up.res5.1.conv1                     |      1.0M            |
+|      backbone.bottom_up.res5.1.conv2                     |      2.4M            |
+|      backbone.bottom_up.res5.1.conv3                     |      1.0M            |
+|     backbone.bottom_up.res5.2                            |     4.5M             |
+|      backbone.bottom_up.res5.2.conv1                     |      1.0M            |
+|      backbone.bottom_up.res5.2.conv2                     |      2.4M            |
+|      backbone.bottom_up.res5.2.conv3                     |      1.0M            |
+|  proposal_generator                                      |  0.6M                |
+|   proposal_generator.rpn_head                            |   0.6M               |
+|    proposal_generator.rpn_head.conv                      |    0.6M              |
+|     proposal_generator.rpn_head.conv.weight              |     (256, 256, 3, 3) |
+|     proposal_generator.rpn_head.conv.bias                |     (256,)           |
+|    proposal_generator.rpn_head.objectness_logits         |    0.8K              |
+|     proposal_generator.rpn_head.objectness_logits.weight |     (3, 256, 1, 1)   |
+|     proposal_generator.rpn_head.objectness_logits.bias   |     (3,)             |
+|    proposal_generator.rpn_head.anchor_deltas             |    3.1K              |
+|     proposal_generator.rpn_head.anchor_deltas.weight     |     (12, 256, 1, 1)  |
+|     proposal_generator.rpn_head.anchor_deltas.bias       |     (12,)            |
+|  roi_heads                                               |  14.3M               |
+|   roi_heads.box_head                                     |   13.9M              |
+|    roi_heads.box_head.fc1                                |    12.8M             |
+|     roi_heads.box_head.fc1.weight                        |     (1024, 12544)    |
+|     roi_heads.box_head.fc1.bias                          |     (1024,)          |
+|    roi_heads.box_head.fc2                                |    1.0M              |
+|     roi_heads.box_head.fc2.weight                        |     (1024, 1024)     |
+|     roi_heads.box_head.fc2.bias                          |     (1024,)          |
+|   roi_heads.box_predictor                                |   0.4M               |
+|    roi_heads.box_predictor.cls_score                     |    83.0K             |
+|     roi_heads.box_predictor.cls_score.weight             |     (81, 1024)       |
+|     roi_heads.box_predictor.cls_score.bias               |     (81,)            |
+|    roi_heads.box_predictor.bbox_pred                     |    0.3M              |
+|     roi_heads.box_predictor.bbox_pred.weight             |     (320, 1024)      |
+|     roi_heads.box_predictor.bbox_pred.bias               |     (320,)           |
