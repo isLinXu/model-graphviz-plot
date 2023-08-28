@@ -1,0 +1,119 @@
+[08/25 16:46:13 detectron2]: Parameter Count:
+| name                                                     | #elements or shape     |
+|:---------------------------------------------------------|:-----------------------|
+| model                                                    | 18.0M                  |
+|  backbone                                                |  8.5M                  |
+|   backbone.stem                                          |   9.4K                 |
+|    backbone.stem.conv1                                   |    9.4K                |
+|     backbone.stem.conv1.weight                           |     (64, 3, 7, 7)      |
+|   backbone.res2                                          |   0.2M                 |
+|    backbone.res2.0                                       |    73.7K               |
+|     backbone.res2.0.shortcut                             |     16.4K              |
+|      backbone.res2.0.shortcut.weight                     |      (256, 64, 1, 1)   |
+|     backbone.res2.0.conv1                                |     4.1K               |
+|      backbone.res2.0.conv1.weight                        |      (64, 64, 1, 1)    |
+|     backbone.res2.0.conv2                                |     36.9K              |
+|      backbone.res2.0.conv2.weight                        |      (64, 64, 3, 3)    |
+|     backbone.res2.0.conv3                                |     16.4K              |
+|      backbone.res2.0.conv3.weight                        |      (256, 64, 1, 1)   |
+|    backbone.res2.1                                       |    69.6K               |
+|     backbone.res2.1.conv1                                |     16.4K              |
+|      backbone.res2.1.conv1.weight                        |      (64, 256, 1, 1)   |
+|     backbone.res2.1.conv2                                |     36.9K              |
+|      backbone.res2.1.conv2.weight                        |      (64, 64, 3, 3)    |
+|     backbone.res2.1.conv3                                |     16.4K              |
+|      backbone.res2.1.conv3.weight                        |      (256, 64, 1, 1)   |
+|    backbone.res2.2                                       |    69.6K               |
+|     backbone.res2.2.conv1                                |     16.4K              |
+|      backbone.res2.2.conv1.weight                        |      (64, 256, 1, 1)   |
+|     backbone.res2.2.conv2                                |     36.9K              |
+|      backbone.res2.2.conv2.weight                        |      (64, 64, 3, 3)    |
+|     backbone.res2.2.conv3                                |     16.4K              |
+|      backbone.res2.2.conv3.weight                        |      (256, 64, 1, 1)   |
+|   backbone.res3                                          |   1.2M                 |
+|    backbone.res3.0                                       |    0.4M                |
+|     backbone.res3.0.shortcut                             |     0.1M               |
+|      backbone.res3.0.shortcut.weight                     |      (512, 256, 1, 1)  |
+|     backbone.res3.0.conv1                                |     32.8K              |
+|      backbone.res3.0.conv1.weight                        |      (128, 256, 1, 1)  |
+|     backbone.res3.0.conv2                                |     0.1M               |
+|      backbone.res3.0.conv2.weight                        |      (128, 128, 3, 3)  |
+|     backbone.res3.0.conv3                                |     65.5K              |
+|      backbone.res3.0.conv3.weight                        |      (512, 128, 1, 1)  |
+|    backbone.res3.1                                       |    0.3M                |
+|     backbone.res3.1.conv1                                |     65.5K              |
+|      backbone.res3.1.conv1.weight                        |      (128, 512, 1, 1)  |
+|     backbone.res3.1.conv2                                |     0.1M               |
+|      backbone.res3.1.conv2.weight                        |      (128, 128, 3, 3)  |
+|     backbone.res3.1.conv3                                |     65.5K              |
+|      backbone.res3.1.conv3.weight                        |      (512, 128, 1, 1)  |
+|    backbone.res3.2                                       |    0.3M                |
+|     backbone.res3.2.conv1                                |     65.5K              |
+|      backbone.res3.2.conv1.weight                        |      (128, 512, 1, 1)  |
+|     backbone.res3.2.conv2                                |     0.1M               |
+|      backbone.res3.2.conv2.weight                        |      (128, 128, 3, 3)  |
+|     backbone.res3.2.conv3                                |     65.5K              |
+|      backbone.res3.2.conv3.weight                        |      (512, 128, 1, 1)  |
+|    backbone.res3.3                                       |    0.3M                |
+|     backbone.res3.3.conv1                                |     65.5K              |
+|      backbone.res3.3.conv1.weight                        |      (128, 512, 1, 1)  |
+|     backbone.res3.3.conv2                                |     0.1M               |
+|      backbone.res3.3.conv2.weight                        |      (128, 128, 3, 3)  |
+|     backbone.res3.3.conv3                                |     65.5K              |
+|      backbone.res3.3.conv3.weight                        |      (512, 128, 1, 1)  |
+|   backbone.res4                                          |   7.1M                 |
+|    backbone.res4.0                                       |    1.5M                |
+|     backbone.res4.0.shortcut                             |     0.5M               |
+|      backbone.res4.0.shortcut.weight                     |      (1024, 512, 1, 1) |
+|     backbone.res4.0.conv1                                |     0.1M               |
+|      backbone.res4.0.conv1.weight                        |      (256, 512, 1, 1)  |
+|     backbone.res4.0.conv2                                |     0.6M               |
+|      backbone.res4.0.conv2.weight                        |      (256, 256, 3, 3)  |
+|     backbone.res4.0.conv3                                |     0.3M               |
+|      backbone.res4.0.conv3.weight                        |      (1024, 256, 1, 1) |
+|    backbone.res4.1                                       |    1.1M                |
+|     backbone.res4.1.conv1                                |     0.3M               |
+|      backbone.res4.1.conv1.weight                        |      (256, 1024, 1, 1) |
+|     backbone.res4.1.conv2                                |     0.6M               |
+|      backbone.res4.1.conv2.weight                        |      (256, 256, 3, 3)  |
+|     backbone.res4.1.conv3                                |     0.3M               |
+|      backbone.res4.1.conv3.weight                        |      (1024, 256, 1, 1) |
+|    backbone.res4.2                                       |    1.1M                |
+|     backbone.res4.2.conv1                                |     0.3M               |
+|      backbone.res4.2.conv1.weight                        |      (256, 1024, 1, 1) |
+|     backbone.res4.2.conv2                                |     0.6M               |
+|      backbone.res4.2.conv2.weight                        |      (256, 256, 3, 3)  |
+|     backbone.res4.2.conv3                                |     0.3M               |
+|      backbone.res4.2.conv3.weight                        |      (1024, 256, 1, 1) |
+|    backbone.res4.3                                       |    1.1M                |
+|     backbone.res4.3.conv1                                |     0.3M               |
+|      backbone.res4.3.conv1.weight                        |      (256, 1024, 1, 1) |
+|     backbone.res4.3.conv2                                |     0.6M               |
+|      backbone.res4.3.conv2.weight                        |      (256, 256, 3, 3)  |
+|     backbone.res4.3.conv3                                |     0.3M               |
+|      backbone.res4.3.conv3.weight                        |      (1024, 256, 1, 1) |
+|    backbone.res4.4                                       |    1.1M                |
+|     backbone.res4.4.conv1                                |     0.3M               |
+|      backbone.res4.4.conv1.weight                        |      (256, 1024, 1, 1) |
+|     backbone.res4.4.conv2                                |     0.6M               |
+|      backbone.res4.4.conv2.weight                        |      (256, 256, 3, 3)  |
+|     backbone.res4.4.conv3                                |     0.3M               |
+|      backbone.res4.4.conv3.weight                        |      (1024, 256, 1, 1) |
+|    backbone.res4.5                                       |    1.1M                |
+|     backbone.res4.5.conv1                                |     0.3M               |
+|      backbone.res4.5.conv1.weight                        |      (256, 1024, 1, 1) |
+|     backbone.res4.5.conv2                                |     0.6M               |
+|      backbone.res4.5.conv2.weight                        |      (256, 256, 3, 3)  |
+|     backbone.res4.5.conv3                                |     0.3M               |
+|      backbone.res4.5.conv3.weight                        |      (1024, 256, 1, 1) |
+|  proposal_generator                                      |  9.5M                  |
+|   proposal_generator.rpn_head                            |   9.5M                 |
+|    proposal_generator.rpn_head.conv                      |    9.4M                |
+|     proposal_generator.rpn_head.conv.weight              |     (1024, 1024, 3, 3) |
+|     proposal_generator.rpn_head.conv.bias                |     (1024,)            |
+|    proposal_generator.rpn_head.objectness_logits         |    15.4K               |
+|     proposal_generator.rpn_head.objectness_logits.weight |     (15, 1024, 1, 1)   |
+|     proposal_generator.rpn_head.objectness_logits.bias   |     (15,)              |
+|    proposal_generator.rpn_head.anchor_deltas             |    61.5K               |
+|     proposal_generator.rpn_head.anchor_deltas.weight     |     (60, 1024, 1, 1)   |
+|     proposal_generator.rpn_head.anchor_deltas.bias       |     (60,)              |
