@@ -1,6 +1,5 @@
-Loading config configs/COCO-Detection/../Base-RetinaNet.yaml with yaml.unsafe_load. Your machine may be at risk if the file contains malicious content.
-[08/29 10:37:32 d2.data.datasets.coco]: Loaded 5000 images in COCO format from datasets/coco/annotations/instances_val2017.json
-[08/29 10:37:32 d2.data.build]: Distribution of instances among all 80 categories:
+[08/29 11:29:56 d2.data.datasets.coco]: Loaded 5000 images in COCO format from datasets/coco/annotations/instances_val2017.json
+[08/29 11:29:56 d2.data.build]: Distribution of instances among all 80 categories:
 |   category    | #instances   |   category   | #instances   |   category    | #instances   |
 |:-------------:|:-------------|:------------:|:-------------|:-------------:|:-------------|
 |    person     | 10777        |   bicycle    | 314          |      car      | 1918         |
@@ -31,14 +30,14 @@ Loading config configs/COCO-Detection/../Base-RetinaNet.yaml with yaml.unsafe_lo
 |     vase      | 274          |   scissors   | 36           |  teddy bear   | 190          |
 |  hair drier   | 11           |  toothbrush  | 57           |               |              |
 |     total     | 36335        |              |              |               |              |
-[08/29 10:37:32 d2.data.dataset_mapper]: [DatasetMapper] Augmentations used in inference: [ResizeShortestEdge(short_edge_length=(800, 800), max_size=1333, sample_style='choice')]
-[08/29 10:37:32 d2.data.common]: Serializing the dataset using: <class 'detectron2.data.common._TorchSerializedList'>
-[08/29 10:37:32 d2.data.common]: Serializing 5000 elements to byte tensors and concatenating them all ...
-[08/29 10:37:32 d2.data.common]: Serialized dataset takes 19.10 MiB
-[08/29 10:37:33 d2.checkpoint.detection_checkpoint]: [DetectionCheckpointer] Loading from detectron2://ImageNetPretrained/MSRA/R-50.pkl ...
-[08/29 10:37:33 fvcore.common.checkpoint]: [Checkpointer] Loading from /home/linxu/.torch/iopath_cache/detectron2/ImageNetPretrained/MSRA/R-50.pkl ...
-[08/29 10:37:33 d2.checkpoint.c2_model_loading]: Renaming Caffe2 weights ......
-[08/29 10:37:33 d2.checkpoint.c2_model_loading]: Following weights matched with submodule backbone.bottom_up:
+[08/29 11:29:56 d2.data.dataset_mapper]: [DatasetMapper] Augmentations used in inference: [ResizeShortestEdge(short_edge_length=(800, 800), max_size=1333, sample_style='choice')]
+[08/29 11:29:56 d2.data.common]: Serializing the dataset using: <class 'detectron2.data.common._TorchSerializedList'>
+[08/29 11:29:56 d2.data.common]: Serializing 5000 elements to byte tensors and concatenating them all ...
+[08/29 11:29:56 d2.data.common]: Serialized dataset takes 19.10 MiB
+[08/29 11:29:57 d2.checkpoint.detection_checkpoint]: [DetectionCheckpointer] Loading from detectron2://ImageNetPretrained/MSRA/R-50.pkl ...
+[08/29 11:29:57 fvcore.common.checkpoint]: [Checkpointer] Loading from /home/linxu/.torch/iopath_cache/detectron2/ImageNetPretrained/MSRA/R-50.pkl ...
+[08/29 11:29:57 d2.checkpoint.c2_model_loading]: Renaming Caffe2 weights ......
+[08/29 11:29:57 d2.checkpoint.c2_model_loading]: Following weights matched with submodule backbone.bottom_up:
 | Names in Model    | Names in Checkpoint      | Shapes                                          |
 |:------------------|:-------------------------|:------------------------------------------------|
 | res2.0.conv1.*    | res2_0_branch2a_{bn_*,w} | (64,) (64,) (64,) (64,) (64,64,1,1)             |
@@ -95,6 +94,6 @@ Loading config configs/COCO-Detection/../Base-RetinaNet.yaml with yaml.unsafe_lo
 | res5.2.conv3.*    | res5_2_branch2c_{bn_*,w} | (2048,) (2048,) (2048,) (2048,) (2048,512,1,1)  |
 | stem.conv1.norm.* | res_conv1_bn_*           | (64,) (64,) (64,) (64,)                         |
 | stem.conv1.weight | conv1_w                  | (64, 3, 7, 7)                                   |
-[08/29 10:37:54 detectron2]: (Million) Activations for Each Type of Operators:
-[('conv', 255.62149050505053)]
-[08/29 10:37:54 detectron2]: Total (Million) Activations: 253.06527559999998±27.956639311106844
+[08/29 11:30:22 detectron2]: (Million) Activations for Each Type of Operators:
+[('conv', 263.2792926969698), ('linear', 2.4737373737373787)]
+[08/29 11:30:22 detectron2]: Total (Million) Activations: 263.09549977±29.64167331191672
