@@ -25,17 +25,20 @@ def plot_network(model, input_size = (1, 28, 28)):
         plt.imshow(out[0][i].detach().numpy(), cmap='gray')
         plt.title('{}\n{}'.format(layer.__class__.__name__, list(out.shape)[1:]))
 
-model = nn.Sequential(
-    nn.Conv2d(1, 20, 5),
-    nn.ReLU(),
-    nn.Conv2d(20, 64, 5),
-    nn.ReLU()
-)
 
-input_size =  (1, 28, 28)
+if __name__ == '__main__':
 
-# model_name = 'vit_base_patch16_224'
-# model = timm.create_model(model_name, pretrained=True)
+    model = nn.Sequential(
+        nn.Conv2d(1, 20, 5),
+        nn.ReLU(),
+        nn.Conv2d(20, 64, 5),
+        nn.ReLU()
+    )
 
-plot_network(model, input_size = (input_size))
-plt.show()
+    input_size =  (1, 28, 28)
+
+    # model_name = 'vit_base_patch16_224'
+    # model = timm.create_model(model_name, pretrained=True)
+
+    plot_network(model, input_size = (input_size))
+    plt.show()
