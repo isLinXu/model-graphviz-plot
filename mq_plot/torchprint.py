@@ -111,10 +111,10 @@ def print_hf_model_info(model_name_or_path, input_data):
 
 if __name__ == '__main__':
     # 打印timm模型摘要信息
-    print_timm_model_info()
+    # print_timm_model_info()
 
     # 打印torchvision模型摘要信息
-    print_torchvision_model_info()
+    # print_torchvision_model_info()
 
     # 打印transformers模型摘要信息
     # Create a sample input
@@ -123,4 +123,4 @@ if __name__ == '__main__':
     print_hf_model_info("gpt2", input_data)
 
     # Print the summary for the BERT model
-    print_hf_model_info("bert-base-uncased", input_data)
+    # print_hf_model_info("bert-base-uncased", input_data)
