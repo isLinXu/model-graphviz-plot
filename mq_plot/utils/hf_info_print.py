@@ -18,7 +18,7 @@ def print_model_summary(model_name_or_path):
     print(f"Input Text: {input_text}")
     summary(model, input_data=input_ids)
 
-
-# Example usage:
-print_model_summary('gpt2')
-print_model_summary('bert-base-uncased')
+if __name__ == '__main__':
+    # Example usage:
+    print_model_summary('gpt2')
+    print_model_summary('bert-base-uncased')
